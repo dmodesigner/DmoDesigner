@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Exkyn.Core.Models;
+using Exkyn.Send.Email;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Site.Models;
 
 namespace Site.Pages
 {
@@ -7,14 +9,20 @@ namespace Site.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger) => _logger = logger;
+
+        private string CreateMessage(ContatoModels contato)
         {
-            _logger = logger;
+            //Criar o template para o envio da mensagem.
+            return contato.Message;
         }
-
-        public void OnGet()
+        public void OnPost(ContatoModels contato)
         {
+            //var configuration = new SendingEmailConfiguration("remetente@email.com.br", "senha_email_remetente");
 
+            //var sendEmail = new Send.Email.Send(configuration);
+
+            //sendEmail.SendEmail(Designer.Email, contato.Subject, CreateMessage(contato));
         }
     }
 }
