@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Exkyn.Core" Version="8.0.0" />
-    <PackageReference Include="Exkyn.Send" Version="1.0.0" />
+    <PackageReference Include="Exkyn.Mail" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
