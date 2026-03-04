@@ -76,7 +76,7 @@
 
                 <div class="footer-item">
 
-                    <h4 class="text-white mb-4">Contact Info</h4>
+                    <h4 class="text-white mb-4">Informações de Contato</h4>
 
                     <div class="d-flex align-items-center">
                         <i class="fas fa-map-marker-alt text-primary me-3"></i>
@@ -85,19 +85,37 @@
 
                     <div class="d-flex align-items-center">
                         <i class="fas fa-envelope text-primary me-3"></i>
-                        <p class="text-white mb-0">daniel@dmodesigner.com.br</p>
+                        <p class="text-white mb-0">@DesignerConstant.Email</p>
                     </div>
 
                     <div class="d-flex align-items-center">
                         <i class="fa fa-phone-alt text-primary me-3"></i>
-                        <p class="text-white mb-0">+55 (11) 99999-9999</p>
+                        <p class="text-white mb-0">@DesignerConstant.Phone</p>
                     </div>
 
                     <div class="d-flex">
-                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f text-white"></i></a>
-                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-twitter text-white"></i></a>
-                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i class="fab fa-instagram text-white"></i></a>
-                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+                        @if(!string.IsNullOrWhiteSpace(DesignerConstant.SocialMedia.Facebook))
+                        {
+                            <a href="@DesignerConstant.SocialMedia.Facebook" class="btn btn-primary btn-sm-square rounded-circle me-3"><i class="fab fa-facebook-f text-white"></i></a>
+                        }
+                        
+                        @if (!string.IsNullOrWhiteSpace(DesignerConstant.SocialMedia.Twitter))
+                        {
+                            <a href="@DesignerConstant.SocialMedia.Twitter" class="btn btn-primary btn-sm-square rounded-circle me-3"><i class="fab fa-twitter text-white"></i></a>
+                        }
+
+                        @if(!string.IsNullOrWhiteSpace(DesignerConstant.SocialMedia.Facebook))
+                        {
+                            <a href="@DesignerConstant.SocialMedia.Facebook" class="btn btn-primary btn-sm-square rounded-circle me-3"><i class="fab fa-instagram text-white"></i></a>
+                        }
+
+                        @if (!string.IsNullOrWhiteSpace(DesignerConstant.SocialMedia.Linkedin))
+                        {
+                            <a href="@DesignerConstant.SocialMedia.Linkedin" class="btn btn-primary btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-white"></i></a>
+                        }
+                        
+                        
+                        
                     </div>
 
                 </div>
@@ -119,11 +137,11 @@
         <div class="row g-4 align-items-center">
 
             <div class="col-md-6 text-center text-md-start mb-md-0">
-                <span class="text-body"><a href="#" class="border-bottom text-white">DMO Designer</a>, Todos os direitos reservados.</span>
+                <span class="text-body"><a href="@DesignerConstant.Url" class="border-bottom text-white">@DesignerConstant.Name</a>, Todos os direitos reservados.</span>
             </div>
 
             <div class="col-md-6 text-center text-md-end text-body">
-                Designer <a class="border-bottom text-white" href="https://htmlcodex.com" target="_blank">HTML Codex</a>
+                Desenvolvido por <a href="@DeveloperConstant.Url" class="border-bottom text-white">@DeveloperConstant.Name</a> | Designer <a class="border-bottom text-white" href="https://htmlcodex.com" target="_blank">HTML Codex</a>
             </div>
 
         </div>
