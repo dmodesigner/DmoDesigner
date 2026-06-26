@@ -1,5 +1,3 @@
 <Solution>
-  <Folder Name="/01 - Site/">
-    <Project Path="Src/Site/Site.csproj" />
-  </Folder>
+  <Folder Name="/01 - Site/" />
 </Solution>
