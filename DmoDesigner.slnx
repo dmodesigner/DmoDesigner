@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/01 - Site/">
-    <Project Path="Src/Site/Site.Client/Site.Client.csproj" Id="8120f765-82d2-4977-a63b-9aa56d59e364" />
-    <Project Path="Src/Site/Site/Site.csproj" Id="281c72bb-ba0d-4991-b576-cd51ae3b8fad" />
+    <Project Path="Src/Site/Site.Client/Site.Client.csproj" Id="9079bccb-59af-4618-a876-6d83c75cf013" />
+    <Project Path="Src/Site/Site/Site.csproj" Id="3b5d3ee9-d4d5-4221-a1ad-460c4861b149" />
   </Folder>
 </Solution>

@@ -1,23 +1,38 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
+<div class="page d-flex flex-column min-vh-100">
+    
+    <!-- Cabeçalho com Navegação Semântica -->
+    <header>
         <NavMenu />
-    </div>
+    </header>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
+    <!-- Área de Conteúdo Principal (Crucial para Leitores de Tela e SEO) -->
+    <main class="flex-grow-1" role="main" id="main-content">
+        @Body
     </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white py-5 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <span class="fw-bold fs-5" style="color: #00bfff;">&lt;DevHub /&gt;</span>
+                    <p class="text-white-50 mt-2 mb-0 small">
+                        Criando soluções digitais de alto impacto com .NET e designs incríveis.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-white-50 small">
+                        &copy; @DateTime.Now.Year - Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
-<div id="blazor-error-ui" data-nosnippet>
-    An unhandled error has occurred.
-    <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
-</div>
+<!-- Skip to main content link para Acessibilidade -->
+<a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 p-2 bg-white text-dark">
+    Pular para o conteúdo principal
+</a>
