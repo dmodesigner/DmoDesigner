@@ -1,203 +1,52 @@
-﻿@page "/"
-
-<!-- Prevenção de SEO Estático no Blazor Auto -->
-<PageTitle>Especialista UI/UX & Desenvolvedor Full-Stack | DevHub</PageTitle>
+﻿
+@page "/"
 
 <HeadContent>
-    <meta name="description" content="Especialista em desenvolvimento web, e-commerce e aplicativos (Android/iOS). Confira meus artigos e escale seu negócio." />
-    <meta name="keywords" content="desenvolvimento web, blazor, .net 10, e-commerce, aplicativos mobile, ui/ux, frontend" />
-    <meta property="og:title" content="Especialista UI/UX & Desenvolvedor Full-Stack" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://seusite.com/images/og-home.jpg" />
+    <title>DevPro | Desenvolvedor Full-Stack e Web Designer Sênior</title>
+    <meta name="description"
+          content="Especialista em desenvolvimento de sites, sistemas e-commerce e aplicativos móveis. Mais de 15 anos de experiência entregando excelência digital."/>
+    <meta property="og:title" content="DevPro | Soluções Digitais de Alto Nível"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://seusite.com.br/"/>
 </HeadContent>
 
-<!-- ==========================================
-     HERO SECTION (Foco em Conversão)
-     ========================================== -->
-<section class="hero-section py-5 py-lg-7" style="background-color: var(--bs-body-bg);">
-    <div class="container py-5">
-        <div class="row align-items-center g-5">
-            <!-- Copywriting e CTAs -->
-            <div class="col-lg-6 text-center text-lg-start">
-                <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill fw-bold" style="font-size: 0.85rem;">
-                    🚀 Disponível para novos projetos
+<section class="hero-section py-5 d-flex align-items-center" style="min-height: 85vh;">
+    <div class="container text-center">
+                <span class="badge rounded-pill mb-4 px-3 py-2 fw-semibold"
+                      style="background-color: rgba(0, 191, 255, 0.1); color: var(--primary-color); border: 1px solid rgba(0,191,255,0.2);">
+                    ✦ Inovação & Engenharia de Software
                 </span>
-                <h1 class="display-4 fw-bolder mb-4" style="line-height: 1.2;">
-                    Transformando ideias em <br />
-                    <span class="text-primary">Soluções Digitais</span> que geram resultado.
-                </h1>
-                <p class="lead mb-4" style="color: var(--bs-body-color);">
-                    Desenvolvedor Full-Stack especialista em .NET e UI/UX. Crio sites, e-commerces e aplicativos mobile com foco em performance, conversão e experiência premium.
-                </p>
-                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                    <a href="/servicos" class="btn btn-primary btn-lg" aria-label="Ver meus serviços detalhados">Conhecer Serviços</a>
-                    <a href="/conteudos" class="btn btn-outline-dark btn-lg" aria-label="Ler meus últimos artigos">Ler Artigos</a>
-                </div>
-            </div>
 
-            <!-- Imagem de Destaque -->
-            <div class="col-lg-6">
-                <div class="position-relative rounded-4 overflow-hidden shadow-lg bg-light" style="aspect-ratio: 4/3; border: 1px solid rgba(0,0,0,0.05);">
-                    <!-- Fallback de Imagem semantica -->
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-                         alt="Notebook com código fonte em uma mesa de trabalho"
-                         class="img-fluid w-100 h-100 object-fit-cover"
-                         loading="eager" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <h1 class="display-3 fw-bold mb-4 text-dark" style="letter-spacing: -1px;">
+            Transformando Visões em <br/>
+            <span class="text-primary-custom">Experiências Digitais</span>
+        </h1>
 
-<!-- ==========================================
-     SERVICES SECTION
-     ========================================== -->
-<section class="services-section py-5" style="background-color: var(--bs-secondary-bg);">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold mb-2">Especialidades</h2>
-            <p class="text-muted fs-5">Arquitetura robusta aliada a um design excepcional</p>
+        <p class="lead text-muted mb-5 mx-auto" style="max-width: 750px; font-size: 1.2rem;">
+            Sou um Desenvolvedor Full-Stack e Designer de UI/UX dedicado a criar plataformas escaláveis, rápidas e
+            orientadas a conversão para marcas que buscam liderança no mercado.
+        </p>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-5">
+            <a href="/contato" class="btn btn-glow btn-lg px-5 py-3">Inicie Seu Projeto</a>
+            <a href="/portfolio" class="btn btn-outline-dark btn-lg px-5 py-3 fw-semibold" style="border-radius: 8px;">Explorar
+                Portfólio</a>
         </div>
 
-        <div class="row g-4">
-            <!-- Serviço 1: Web -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 p-4 border-0 shadow-sm bg-white">
-                    <div class="card-body">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-3 p-3 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-browser-edge" viewBox="0 0 16 16">
-                                <path d="M9.482 4.241c-.676.012-1.508.236-2.128.852A3.19 3.19 0 0 0 6.46 7.346h-.006a2.7 2.7 0 0 1 1.706-2.316 2.76 2.76 0 0 1 2.05.088c.16.068.31.15.447.243.32.222.628.528.847.886.155.25.267.545.312.862.062.434-.025.864-.204 1.25-.19.41-.482.762-.843 1.026a2.7 2.7 0 0 1-1.597.55 2.72 2.72 0 0 1-1.636-.5 2.9 2.9 0 0 1-.864-1.028A4.6 4.6 0 0 0 7.82 9.5a4.7 4.7 0 0 0 2.222-.505 3.3 3.3 0 0 0 1.261-1.096 3.1 3.1 0 0 0 .584-1.547 3.03 3.03 0 0 0-.256-1.644 3.07 3.07 0 0 0-1.11-1.258 2.9 2.9 0 0 0-1.039-.41zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 1 0 0 14A7 7 0 0 0 8 1"/>
-                            </svg>
-                        </div>
-                        <h3 class="h5 fw-bold mb-3">Sistemas Web .NET</h3>
-                        <p class="text-muted mb-0">Desenvolvimento de portais e sistemas corporativos de alta performance com C# e Blazor Auto.</p>
-                    </div>
-                </div>
+        <!-- Indicadores de Autoridade (Social Proof) -->
+        <div class="row pt-5 mt-4 border-top mx-auto" style="max-width: 900px;">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h2 class="display-5 fw-bold text-primary-custom mb-0">15+</h2>
+                <p class="text-muted fw-semibold mb-0">Anos de Experiência</p>
             </div>
-
-            <!-- Serviço 2: E-commerce -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 p-4 border-0 shadow-sm bg-white">
-                    <div class="card-body">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-3 p-3 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="h5 fw-bold mb-3">E-commerce</h3>
-                        <p class="text-muted mb-0">Lojas virtuais escaláveis e seguras, com foco absoluto em conversão de vendas e velocidade.</p>
-                    </div>
-                </div>
+            <div class="col-md-4 mb-4 mb-md-0 border-start border-end">
+                <h2 class="display-5 fw-bold text-primary-custom mb-0">100+</h2>
+                <p class="text-muted fw-semibold mb-0">Projetos Entregues</p>
             </div>
-
-            <!-- Serviço 3: Apps -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 p-4 border-0 shadow-sm bg-white">
-                    <div class="card-body">
-                        <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary rounded-3 p-3 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                                <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-                                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="h5 fw-bold mb-3">Aplicativos (iOS/Android)</h3>
-                        <p class="text-muted mb-0">Desenvolvimento de apps nativos ou híbridos intuitivos utilizando as melhores práticas de UI/UX.</p>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <h2 class="display-5 fw-bold text-primary-custom mb-0">100%</h2>
+                <p class="text-muted fw-semibold mb-0">Foco em Resultados</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==========================================
-     LATEST ARTICLES SECTION (SEO Otimizado)
-     ========================================== -->
-<section class="articles-section py-5" style="background-color: var(--bs-body-bg);">
-    <div class="container py-4">
-
-        <!-- Header da Seção -->
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
-            <div>
-                <h2 class="fw-bold mb-2">Últimos Conteúdos</h2>
-                <p class="text-muted fs-5 mb-0">Estratégias, códigos e insights de mercado.</p>
-            </div>
-            <a href="/conteudos" class="btn btn-link text-primary text-decoration-none fw-bold px-0 mt-3 mt-md-0">
-                Acessar Blog Completo &rarr;
-            </a>
-        </div>
-
-        <div class="row g-4">
-            <!-- Article 1 -->
-            <article class="col-md-6 col-lg-4">
-                <div class="card h-100 border-0 shadow-sm overflow-hidden bg-white">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover" alt="Monitor mostrando linhas de código" style="height: 200px;" loading="lazy">
-                    <div class="card-body p-4 d-flex flex-column">
-                        <div class="mb-3">
-                            <span class="badge bg-primary-subtle text-primary fw-semibold border border-primary-subtle">Blazor</span>
-                        </div>
-                        <h3 class="h5 fw-bold mb-2">
-                            <a href="/conteudos/novo-blazor-auto" class="text-dark text-decoration-none stretched-link">
-                                Entendendo o poder do Blazor Auto no .NET 10
-                            </a>
-                        </h3>
-                        <p class="text-muted small mb-4 flex-grow-1">Descubra como combinar renderização no servidor e no cliente para criar aplicações instantâneas.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-3">
-                            <small class="text-muted fw-medium">
-                                <time datetime="2026-06-25">25 de Jun, 2026</time>
-                            </small>
-                            <span class="text-primary small fw-bold">Ler artigo</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Article 2 -->
-            <article class="col-md-6 col-lg-4">
-                <div class="card h-100 border-0 shadow-sm overflow-hidden bg-white">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover" alt="Esboço de design de interface mobile" style="height: 200px;" loading="lazy">
-                    <div class="card-body p-4 d-flex flex-column">
-                        <div class="mb-3">
-                            <span class="badge bg-primary-subtle text-primary fw-semibold border border-primary-subtle">UI/UX</span>
-                        </div>
-                        <h3 class="h5 fw-bold mb-2">
-                            <a href="/conteudos/mobile-first-conversao" class="text-dark text-decoration-none stretched-link">
-                                Mobile-First: Segredos para aumentar a conversão
-                            </a>
-                        </h3>
-                        <p class="text-muted small mb-4 flex-grow-1">Como regras básicas de espaçamento, tipografia e zonas de toque mudam a experiência do usuário.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-3">
-                            <small class="text-muted fw-medium">
-                                <time datetime="2026-06-18">18 de Jun, 2026</time>
-                            </small>
-                            <span class="text-primary small fw-bold">Ler artigo</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Article 3 -->
-            <article class="col-md-6 col-lg-4 d-none d-lg-block">
-                <div class="card h-100 border-0 shadow-sm overflow-hidden bg-white">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80" class="card-img-top object-fit-cover" alt="Pagamento online em E-commerce" style="height: 200px;" loading="lazy">
-                    <div class="card-body p-4 d-flex flex-column">
-                        <div class="mb-3">
-                            <span class="badge bg-primary-subtle text-primary fw-semibold border border-primary-subtle">E-commerce</span>
-                        </div>
-                        <h3 class="h5 fw-bold mb-2">
-                            <a href="/conteudos/arquitetura-ecommerce" class="text-dark text-decoration-none stretched-link">
-                                Arquitetura Escalável para E-commerces em C#
-                            </a>
-                        </h3>
-                        <p class="text-muted small mb-4 flex-grow-1">Padrões de projeto, microsserviços e mensageria para sustentar alto volume na Black Friday.</p>
-                        <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-3">
-                            <small class="text-muted fw-medium">
-                                <time datetime="2026-06-10">10 de Jun, 2026</time>
-                            </small>
-                            <span class="text-primary small fw-bold">Ler artigo</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
         </div>
     </div>
 </section>

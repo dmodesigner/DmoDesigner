@@ -1,0 +1,74 @@
+:root {
+    --primary-color: #00bfff; /* Cor de destaque solicitada */
+    --bg-white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #6c757d;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+/* 
+ * Botão Glow Customizado 
+ * Efeito de pulsação suave em estado normal e expansão no hover.
+ */
+.btn-glow {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.6);
+    animation: pulse-glow 2.5s infinite;
+}
+
+.btn-glow:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.9);
+    transform: translateY(-2px);
+    animation: none; /* Pausa a pulsação no hover para focar na interação */
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.4); }
+}
+
+/* Ajustes de Navbar */
+.navbar {
+    border-bottom: 1px solid #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--text-dark) !important;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 191, 255, 0.1);
+    color: var(--primary-color);
+}

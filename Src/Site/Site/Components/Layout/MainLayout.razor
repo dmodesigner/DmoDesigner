@@ -1,38 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page d-flex flex-column min-vh-100">
-    
-    <!-- Cabeçalho com Navegação Semântica -->
-    <header>
-        <NavMenu />
-    </header>
+<NavMenu></NavMenu>
 
-    <!-- Área de Conteúdo Principal (Crucial para Leitores de Tela e SEO) -->
-    <main class="flex-grow-1" role="main" id="main-content">
+<div class="page-wrapper" style="padding-top: 80px;">
+    
+    <main>
         @Body
     </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-dark text-white py-5 mt-auto">
-        <div class="container text-center text-md-start">
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <span class="fw-bold fs-5" style="color: #00bfff;">&lt;DevHub /&gt;</span>
-                    <p class="text-white-50 mt-2 mb-0 small">
-                        Criando soluções digitais de alto impacto com .NET e designs incríveis.
-                    </p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-white-50 small">
-                        &copy; @DateTime.Now.Year - Todos os direitos reservados.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <Footer></Footer>
 </div>
 
-<!-- Skip to main content link para Acessibilidade -->
-<a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 p-2 bg-white text-dark">
-    Pular para o conteúdo principal
-</a>
+<!-- Bootstrap 5 JS com Popper (Necessário para o funcionamento do Dropdown no layout mobile e desktop) -->
